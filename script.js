@@ -52,7 +52,7 @@ const display = (data) =>{
 
 function share(author, dataUrl) {
   console.log("share")
-  const file = new File([dataUrl], "picture.png", { type: "image/png" });
+  const file = new File(dataUrl, "picture.png", { type: "image/png" });
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
         navigator
           .share({
