@@ -24,7 +24,7 @@ loadData();
 
 const display = (data) =>{
     let root = document.getElementById("root")
-    data.map(({download_url, author, url })=>{
+    data.map(({download_url, author })=>{
         let div = document.createElement("div")
         div.setAttribute('class','div')
         let container = document.createElement("div")
@@ -39,7 +39,7 @@ const display = (data) =>{
         p.innerText = `Photo by ${author}`
         let button = document.createElement('button')
         button.setAttribute('class','btn')
-        button.addEventListener('click', ()=>{share(`${author}`, url)})
+        button.addEventListener('click', ()=>{share(`${author}`, download_url)})
         button.innerHTML='Share'
         content.append(button)
         container.append(p,content)
