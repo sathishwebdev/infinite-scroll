@@ -2,13 +2,9 @@ const root = document.querySelector('#root');
 let loader = document.createElement('div');
 loader.setAttribute('class','loader')
 
-const URL = 'https://dog.ceo/api/breeds/image/random'
-// https://dog.ceo/api/breeds/image/random
-// get the images
-
 function loadData(page=0, limit=10){ 
     if(page>0){
-        fetch(`https://picsum.photos/v2/list?page=${page}&limit=10`)
+        fetch(`https://picsum.photos/v2/list?page=${page}&limit=${limit}`)
     .then(response=>response.json())
     .then(data=>{
     console.log(data)
