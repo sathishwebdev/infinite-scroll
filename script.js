@@ -13,6 +13,7 @@ function loadData(page=0, limit=10){
     .then(data=>{
     console.log(data)
         display(data)
+        loader.remove()
     })   
     }
     else{fetch('https://picsum.photos/v2/list')
@@ -87,6 +88,7 @@ let pageCount =  1
 window.addEventListener('scroll',()=>{
     if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
         pageCount++
+        root.append(loader);
         loadData(pageCount, 10);
     }
 })
