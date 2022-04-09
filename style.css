@@ -20,6 +20,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    height: 92vh;
+    overflow-y: auto;
+
   }
   
 /* loader */
@@ -83,4 +86,16 @@
   .div{
       /* max-width: 600px; */
       width:100%;
+  }
+
+  footer{
+    padding: 2px;
+    color: white;
+    background-color: black;
+    height: 5vh;
+    text-align: center;
+  }
+
+  footer a{
+    color: #ffce48
   }
