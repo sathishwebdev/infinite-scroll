@@ -58,7 +58,6 @@ function share(author, dataUrl) {
           .share({
             files: [file],
             text: `Photo by ${author}`,
-            // url: "https://factsvf.web.app",
             title: `Photo | ${author}`,
           })
           .then(() => console.log("Share was successful."))

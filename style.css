@@ -1,4 +1,9 @@
-
+body{
+  overflow-x: hidden;
+}
+.div{
+  width:100%;
+}
 .container img{
     width: 100%;
     max-width: 600px;
@@ -20,6 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding:2%;
   }
   
 /* loader */
@@ -81,22 +87,34 @@
     left: 16px;
     color: white;
   }
-  .div{
-      /* max-width: 600px; */
-      width:100%;
-  }
+ 
 
   footer{
     padding: 2px;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
     text-align: center;
     position: sticky;
-    left: 0;
+    left:0;
     bottom: 0;
+    right:0;
     width: 100%;
   }
 
   footer a{
     color: #ffce48
   }
+
+  .nav{
+    color: black;
+    background-color: white;
+    text-align: center;
+    position: sticky;
+    left:0;
+    right:0;
+    top: 0;
+    width: 100%;
+    z-index:2;
+    max-height: 50px;
+  }
+
