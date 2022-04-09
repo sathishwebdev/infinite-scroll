@@ -39,7 +39,7 @@ const display = (data) =>{
         p.innerText = `Photo by ${author}`
         let button = document.createElement('button')
         button.setAttribute('class','btn')
-        button.addEventListener('click', ()=>{share(`${author}`, download_url)})
+        button.addEventListener('click', ()=>{share(`${author}`, url)})
         button.innerHTML='Share'
         content.append(button)
         container.append(p,content)
