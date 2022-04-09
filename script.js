@@ -50,11 +50,14 @@ const display = (data) =>{
 }
 
 
-function share(author, dataUrl) {
-      if (navigator.canShare && navigator.canShare({ files: [dataUrl] })) {
+async function share(author, imageUrl) {
+  const image = await fetch(imageUrl);
+const blob = await image.blob();
+const file = new File([blob], 'image.jpg', { type: 'image/jpeg' });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
         navigator
           .share({
-            files: [dataUrl],
+            files: [file],
             text: `Photo by ${author}`,
             title: `Photo | ${author}`,
           })
