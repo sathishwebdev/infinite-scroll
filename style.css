@@ -20,9 +20,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 92vh;
-    overflow-y: auto;
-
   }
   
 /* loader */
@@ -37,6 +34,7 @@
     height: 20px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 1s linear infinite;
+    margin: 20px;
   }
   
   /* Safari */
@@ -92,8 +90,11 @@
     padding: 2px;
     color: white;
     background-color: black;
-    height: 5vh;
     text-align: center;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
   }
 
   footer a{
