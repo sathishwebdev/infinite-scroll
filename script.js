@@ -38,13 +38,14 @@ const display = (data) =>{
         let content = document.createElement('div')
         content.setAttribute("class", 'content')
         let p = document.createElement('p')
+        p.setAttribute("class", 'author')
         p.innerText = `Photo by ${author}`
         let button = document.createElement('button')
         button.setAttribute('class','btn')
         button.addEventListener('click', ()=>{share(`${author}`, download_url)})
         button.innerHTML='Share'
         content.append(button)
-        container.append(content)
+        container.append(p,content)
         div.append(container)
         root.append(div)
     })
